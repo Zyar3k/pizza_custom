@@ -1,0 +1,9 @@
+.header {
+  padding: 30px 50px;
+  background: black;
+}
+
+.headerContent {
+  color: white;
+  font-size: 30px;
+}
