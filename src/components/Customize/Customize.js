@@ -8,9 +8,12 @@ import Mushroom from '../../assets/Mushroom.png';
 import Basil from '../../assets/Basil.png';
 import Tomato from '../../assets/Tomato.png';
 import { motion } from 'framer-motion';
+import { useHistory } from "react-router-dom";
 
 
 export default function Customize({ingredients, setIngredients}) {
+
+  let history = useHistory();
 
   const onChange = (event, name) => {
     let newIngredients = JSON.parse(JSON.stringify(ingredients));
@@ -24,13 +27,6 @@ export default function Customize({ingredients, setIngredients}) {
     <div className='customCont'>
       <div className='pizzaCont'>
         <div className='imgWrapper'>
-          {/* <img src={Cheese} alt='Cheese' className='ingredients' />
-          <img src={Olive} alt='Olive' className='ingredients' />
-          <img src={Pineapple} alt='Pineapple' className='ingredients' />
-          <img src={Mushroom} alt='Mushroom' className='ingredients' />
-          <img src={Basil} alt='Basil' className='ingredients' />
-          <img src={Tomato} alt='Tomato' className='ingredients' />
-          <img src={Base} alt='Pizza Base' className='pizzaBase'  /> */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
@@ -169,6 +165,12 @@ export default function Customize({ingredients, setIngredients}) {
           />
           <span className="checkmark"></span>
         </label>
+        <button
+          onClick={() => history.push("/checkout")}
+          className="proceedToCheckout"
+        >
+          Proceed to Checkout
+        </button>
       </div>
 
     </div>

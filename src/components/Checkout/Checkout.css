@@ -1,0 +1,28 @@
+.checkoutCont {
+  display: flex;
+}
+
+.proceedToCheckout {
+  margin-left: 10px;
+}
+
+.successWrap {
+  text-align: center;
+}
+
+.pizzaman {
+  height: 300px;
+}
+
+.confirmTitle {
+    font-family: Open Sans Condensed;
+    font-size: 35px
+  }
+
+  .confirmOrder {
+    font-family: Comfortaa;
+  }
+
+  .confirmTime {
+    font-family: Indie Flower;
+}
