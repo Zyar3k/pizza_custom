@@ -7,6 +7,7 @@ import Pineapple from '../../assets/Pineapple.png';
 import Mushroom from '../../assets/Mushroom.png';
 import Basil from '../../assets/Basil.png';
 import Tomato from '../../assets/Tomato.png';
+import { motion } from 'framer-motion';
 
 
 export default function Customize({ingredients, setIngredients}) {
@@ -23,13 +24,86 @@ export default function Customize({ingredients, setIngredients}) {
     <div className='customCont'>
       <div className='pizzaCont'>
         <div className='imgWrapper'>
-          <img src={Cheese} alt='Cheese' className='ingredients' />
+          {/* <img src={Cheese} alt='Cheese' className='ingredients' />
           <img src={Olive} alt='Olive' className='ingredients' />
           <img src={Pineapple} alt='Pineapple' className='ingredients' />
           <img src={Mushroom} alt='Mushroom' className='ingredients' />
           <img src={Basil} alt='Basil' className='ingredients' />
           <img src={Tomato} alt='Tomato' className='ingredients' />
-          <img src={Base} alt='Pizza Base' className='pizzaBase'  />
+          <img src={Base} alt='Pizza Base' className='pizzaBase'  /> */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              y: ingredients["basil"] ? 100 : -100,
+              opacity: ingredients["basil"] ? 1 : 0,
+            }}
+            transition={{ duration: 1 }}
+            className="ingredients z4"
+          >
+            <img src={Basil} alt="Pizza Base" height="100%" width="100%" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              y: ingredients["olive"] ? 100 : -100,
+              opacity: ingredients["olive"] ? 1 : 0,
+            }}
+            transition={{ duration: 1 }}
+            className="ingredients z4"
+          >
+            <img src={Olive} alt="Pizza Base" height="100%" width="100%" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              y: ingredients["pineapple"] ? 100 : -100,
+              opacity: ingredients["pineapple"] ? 1 : 0,
+            }}
+            transition={{ duration: 1 }}
+            className="ingredients z3"
+          >
+            <img src={Pineapple} alt="Pizza Base" height="100%" width="100%" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              y: ingredients["tomato"] ? 100 : -100,
+              opacity: ingredients["tomato"] ? 1 : 0,
+            }}
+            transition={{ duration: 1 }}
+            className="ingredients z4"
+          >
+            <img src={Tomato} alt="Tomato" height="100%" width="100%" />
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{
+              // y: ingredients["cheese"] ? 100 : -100,
+              // opacity: ingredients["cheese"] ? 1 : 0,
+              scale: ingredients["cheese"] ? 1 : 0,
+            }}
+            transition={{ duration: 0.3 }}
+            className="cheese z1"
+          >
+            <img src={Cheese} alt="Cheese" height="100%" width="100%" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              y: ingredients["mushroom"] ? 100 : -100,
+              opacity: ingredients["mushroom"] ? 1 : 0,
+            }}
+            transition={{ duration: 1 }}
+            className="ingredients z4"
+          >
+            <img src={Mushroom} alt="Pizza Base" height="100%" width="100%" />
+          </motion.div>
+
+          <motion.div transition={{ duration: 1 }} className="">
+            <img src={Base} alt="Pizza Base" height="100%" width="100%" />
+          </motion.div>
         </div>
       </div>
       <div className='checkCont'>
