@@ -1,0 +1,25 @@
+.customCont {
+  display: flex;
+}
+
+.pizzaCont, .checkCont {
+  border: 2px solid black;
+  flex: 1;
+}
+
+.imgWrapper {
+  max-height: 500px;
+  max-width: 500px;
+  position: relative;
+}
+
+.ingredients {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.pizzaBase {
+  height: 100%;
+  width: 100%;
+}

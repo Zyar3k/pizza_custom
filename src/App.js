@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from './components/Header/Header';
+import Customize from './components/Customize/Customize';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <h1>Customize</h1>
+            <Customize />
           </Route>
           <Route path="/checkout">
             <h1>Checkout</h1>
