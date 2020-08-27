@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from './components/Header/Header';
 import Customize from './components/Customize/Customize';
@@ -14,6 +14,14 @@ function App() {
     pineapple: false,
     tomato: false,
   });
+
+
+  useEffect(() => {
+    const data = localStorage.getItem("ingredients");
+    if (data) {
+      setIngredients(JSON.parse(data));
+    }
+  }, []);
 
   return (
     <div>
