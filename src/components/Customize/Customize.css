@@ -3,7 +3,7 @@
 }
 
 .pizzaCont, .checkCont {
-  border: 2px solid black;
+  padding: 40px;
   flex: 1;
 }
 
@@ -173,4 +173,16 @@
 }
 .z4 {
   z-index: 4;
+}
+
+.proceedToCheckout {
+  margin-top: 30px;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  background: orange;
+  border: 0px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 20px;
 }

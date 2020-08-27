@@ -9,7 +9,7 @@ export default function Checkout({ ingredients }) {
 
   return (
     <div className='checkoutCont'>
-      <div>
+      <div className='checkComp'>
         <div>
           <h1>My Ingredients</h1>
           {Object.keys(ingredients).map((ingredient) => {
@@ -33,7 +33,7 @@ export default function Checkout({ ingredients }) {
           </button>
         </div>
       </div>
-      <div>
+      <div className='succComp'>
         {success && (
           <div className='successWrap'>
             <img className='pizzaman' src={Pizzaman} alt="pizzaman"/>

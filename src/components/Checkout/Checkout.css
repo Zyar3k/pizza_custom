@@ -2,6 +2,15 @@
   display: flex;
 }
 
+.checkComp {
+  flex: 1;
+  margin-left: 30px;
+}
+
+.succComp {
+  flex: 1;
+}
+
 .proceedToCheckout {
   margin-left: 10px;
 }
@@ -15,14 +24,14 @@
 }
 
 .confirmTitle {
-    font-family: Open Sans Condensed;
-    font-size: 35px
-  }
+  font-family: Open Sans Condensed;
+  font-size: 35px
+}
 
-  .confirmOrder {
-    font-family: Comfortaa;
-  }
+.confirmOrder {
+  font-family: Comfortaa;
+}
 
-  .confirmTime {
-    font-family: Indie Flower;
+.confirmTime {
+  font-family: Indie Flower;
 }

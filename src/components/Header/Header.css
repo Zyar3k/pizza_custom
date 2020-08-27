@@ -1,9 +1,23 @@
 .header {
-  padding: 30px 50px;
-  background: black;
+  background: #0D0628;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .headerContent {
-  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+.logoTitle {
+  margin-left: 20px;
   font-size: 30px;
+  color: yellow;
+  font-family: Alata, sans-serif;
 }
